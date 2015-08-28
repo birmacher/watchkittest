@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="BitWatch_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="center" text="$0.00" id="vGM-hd-W1b">
+                            <fontDescription key="font" type="system" weight="semibold" pointSize="30"/>
+                        </label>
+                        <group width="1" alignment="left" id="yxu-sP-sg3">
+                            <items>
+                                <imageView width="32" height="32" alignment="center" verticalAlignment="center" id="OwJ-4S-2Hd"/>
+                                <label alignment="center" verticalAlignment="center" text="1 BTC" id="DmV-it-IVx"/>
+                            </items>
+                        </group>
+                        <label alignment="center" verticalAlignment="bottom" text="Last Updated" textAlignment="center" id="L7E-h7-FXo">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <button width="1" alignment="center" verticalAlignment="bottom" title="Refresh" id="MtU-Ar-aG7">
+                            <fontDescription key="font" type="system" weight="medium" pointSize="16"/>
+                            <connections>
+                                <action selector="refreshTapped" destination="AgC-eL-Hgc" id="hAV-8h-7Vn"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="image" destination="OwJ-4S-2Hd" id="di7-hY-Lsy"/>
+                        <outlet property="lastUpdatedLabel" destination="L7E-h7-FXo" id="Wa3-Hs-ihu"/>
+                        <outlet property="priceLabel" destination="vGM-hd-W1b" id="S1t-7Y-6bI"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
